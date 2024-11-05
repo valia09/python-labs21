@@ -4,8 +4,8 @@ class Ship:
          self.__name = name
          self.__tonnage = tonnage
          self.__passengers = passengers
-         self.__speed = speed
-         self.__type = type
+         self.speed = speed
+         self.type = type
 
     def set_name(self, name):
         self.__name = name
@@ -26,13 +26,13 @@ class Ship:
         return self.__passengers
 
     def __repr__ (self):
-        return f"Ship(name: {self.__name}, tonnage: {self.__tonnage}, passengers: {self.__passengers}, speed: {self.__speed}, type: {self.__type})"
+        return f"Ship(name: {self.__name}, tonnage: {self.__tonnage}, passengers: {self.__passengers}, speed: {self.speed}, type: {self.type})"
 
     def __str__ (self):
-        return f"name: {self.__name}, tonnage: {self.__tonnage}, passengers: {self.__passengers}, speed: {self.__speed}, type: {self.__type})"
+        return f"name: {self.__name}, tonnage: {self.__tonnage}, passengers: {self.__passengers}, speed: {self.speed}, type: {self.type}"
 
     def __del__ (self):
-        print(f"Ship: {self.__name} delated")
+        print(f"Ship: {self.__name} deleted")
 
 def main():
      ship_1 = Ship( "Bismarck", 41700, 2065, 55.56, "battleship" )
